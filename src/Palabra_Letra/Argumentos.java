@@ -2,15 +2,18 @@ package Palabra_Letra;
 
 public class Argumentos {
 
+	
+	 //// antes he ido al run as arguments y he escrito una frase que es commit -m hola
+	
 	public static void main(String[] argumentos) {
 		
 			int numPalabras = argumentos.length;
 			
+			
 		///////////////////////////////// con el uso del for /////////////
 
 	
-//
-//		
+			
 //		for (int i = 0; i < numPalabras; i++) {
 //			
 //			for (int j = 0; j <argumentos[i].length(); j++) // mejor con while para k se parece un i no se falta k segues en bucle
@@ -24,7 +27,6 @@ public class Argumentos {
 //			}
 //		}
 //
-	
 	 
 	/////////////////////////////// con el uso de metodo de palabraTieneI
 		
