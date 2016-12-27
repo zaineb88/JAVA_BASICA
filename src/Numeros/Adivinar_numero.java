@@ -9,27 +9,59 @@ public class Adivinar_numero {
 	}
 	public static void Adivinar ()
 	{
-
+		
 	int x=(int)(100*Math.random()+1);
 	
-	for(int i=0;i<5;i++)
-	{
-		int numero=pedirNumero();
-		
-		if(x==numero)
+	 /////////////////////////// con el uso de for ///////////////////
+	
+//	for(int i=0;i<5;i++)
+//	{
+//		int numero=pedirNumero();
+//		
+//		if(x==numero)
+//		{
+//			System.out.println("los dos numeros son iguales");
+//		}
+//		else if (x<numero)
+//	        	{
+//			      System.out.println("eliges utro numero menos que este numero");
+//	        	}
+//		   else
+//	        	{ System.out.println("eliges utro numero mayor que este numero");}
+//	}
+//	    System.out.println("Losiento ha terminado sus intentos");
+	
+	////////////////// con uso de  do while ////////////////////////
+	
+	  int con=0;
+	  int numero=0;
+	do
+	{ 
+		numero=pedirNumero();
+	    if(x==numero)
 		{
 			System.out.println("los dos numeros son iguales");
 		}
-		else if (x<numero)
+		if (x<numero )
 	        	{
-			      System.out.println("eleges utro numero menos que este numero");
+			      System.out.println("elige otro numero menos que este numero");
+			   
 	        	}
 		   else
-	        	{ System.out.println("eleges utro numero mayor que este numero");}
-	}
-	    System.out.println("Losiento ha terminado sus intentos");
+	        	{ System.out.println("elige otro numero mayor que este numero");
+	        	 }
+		con ++;
+	   }while(con<5 && x!=numero);
+	
+		if(x!=numero)
+			System.out.println("Losiento ha terminado sus intentos");
+	    
+
+	
+
 	}
 	
+	  ///////////////////////////////////////////
 	
 	public static int pedirNumero() {
 	
