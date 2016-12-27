@@ -192,8 +192,7 @@ public class Palabra_letra {
 				//System.out.println(nVeces);
 			}
 			return nVeces; // return no fuciona no se porque
-		}
-		
+		}	
 		
 }
 	
