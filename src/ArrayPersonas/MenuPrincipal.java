@@ -14,7 +14,10 @@ public class MenuPrincipal {
 		System.out.println("2: LISTAR PERSONAS");
 		System.out.println("3: BUSCAR PERSONA POR NOMBRE");
 		System.out.println("4: BORRAR PERSONA");
-		System.out.println("5: SALIR");
+		System.out.println("5: BUSCAR PERSONA POR EDAD");
+		System.out.println("6: ORDENAR LAS PERSONAS POR EDAD");
+		System.out.println("7: INSERTAR LA LISA ORDENADA");
+		System.out.println("8: SALIR");
 		numero = pedirNumero();
 
 		switch (numero) {
@@ -39,10 +42,22 @@ public class MenuPrincipal {
 			Funciones.borrar(pedirNombre());
 			break;
 		case 5:
-			System.out.println("SALIR");
-			System.exit(0);
-			// metodo de salir
+			System.out.println("BUSCAR POR EDAD");
+			int numero1=MenuPrincipal.pedirNumero();
+			Funciones.buscarEdad(numero1);
 			break;
+		case 6:
+			System.out.println("ORDENAR POR EDAD");
+			//metodo ordenar po edad
+			Funciones.ordenar();
+			break;
+		case 7:
+			System.out.println("INSERTAR ORDENADO");
+			break;
+		case 8:
+			System.out.println("SALIR");
+			// metodo de salir
+			System.exit(0);
 		default:
 			System.out.println("Losiento ha elegido número incorrect");
 

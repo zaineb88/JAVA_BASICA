@@ -93,12 +93,13 @@ public class Funciones {
 		String nombre = MenuPrincipal.pedirNombre();
 		System.out.println("Dame su edad:");
 		int edad = MenuPrincipal.pedirNumero();
-		mostrar();
+		
 		Persona array_persona[] = null;
 		array_persona = new Persona[NUM_PERSONAS + 1];
+		mostrar();
 		Persona personaNueva = new Persona(nombre, edad);
 
-		System.out.println("Nombre del persona 6= " + nombre);
+		System.out.println("Nombre del persona "+(NUM_PERSONAS + 1)+"= " + nombre);
 		System.out.println("Su edad= " + edad);
 
 	}
@@ -153,7 +154,7 @@ public class Funciones {
 	
 	///////////////////////////////////////////////////
 	
-	////////////// las funciones para menu edad ///////
+	////////////// las funciones para edad ///////
 	
 	
 	////////// metodo del mayor edad

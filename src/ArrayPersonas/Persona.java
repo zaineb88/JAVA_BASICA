@@ -7,7 +7,7 @@ public class Persona {
 	public static void main(String[] args) {
 		
 		MenuPrincipal.menu();	
-		//MenuEdad.menu2();
+		
 		
 	}
 	private int edad;
