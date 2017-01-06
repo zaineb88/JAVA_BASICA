@@ -53,6 +53,7 @@ public class MenuPrincipal {
 			break;
 		case 7:
 			System.out.println("INSERTAR ORDENADO");
+			Funciones.insertarOrdenado();
 			break;
 		case 8:
 			System.out.println("SALIR");

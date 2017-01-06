@@ -348,6 +348,18 @@ public class Funciones {
 	}
 
 	
+	//////////////// metodo insertar ordenado
+	
+	public static void insertarOrdenado()
+	{
+		for (int i=0;i<NUM_PERSONAS;i++)
+		{
+		insertar();
+	    ordenar();
+		
+		}
+	}
+	
 	
 }
 

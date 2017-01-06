@@ -10,11 +10,10 @@ public class EjemloSwitch {
 		
 	}
 		private static void imprimeNotaAlfabitica(int nota)
-		{
-			// falta la llamada de metodo de pedir nota 
+		{ 
 			
 			System.out.println("Dame nota :");
-			
+			nota=Inicio.pedirEdad();
 			switch (nota)
 			{
 			case 10:
