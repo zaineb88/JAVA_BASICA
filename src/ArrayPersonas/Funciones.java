@@ -38,7 +38,7 @@ public class Funciones {
 
 	////////////// buscar persona
 
-	public static int buscar(String persona) {
+	public static int buscar(String persona) { // va a volver su posision porque voy a utilisarlo en el metodo de borra
 
 		 
 		Persona persona_aux = null;
@@ -66,7 +66,7 @@ public class Funciones {
 			persona_aux = array_persona[con];
 			nombre_aux = persona_aux.getNombre();
 			edad_aux = persona_aux.getEdad();
-
+ 
 			if (persona.equalsIgnoreCase(nombre_aux)) {
 
 				System.out.println("Nombre del persona " + (con + 1) + "= " + nombre_aux);

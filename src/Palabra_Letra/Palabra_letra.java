@@ -35,7 +35,9 @@ public class Palabra_letra {
 		
 	     //  nLetrasArevez("juan",2);
 	      
-	     NLetraEnPalabra("sousou",'s');
+	   //  NLetraEnPalabra("sousou",'s');
+	     
+		esPalindromo(mostrarPalabra());
 	}
 
 	public static void mostrar() {
@@ -163,6 +165,7 @@ public class Palabra_letra {
 		{
 		
 				System.out.println(palabra.charAt(i));	
+			
 	
 		}}
 		
@@ -193,6 +196,42 @@ public class Palabra_letra {
 			}
 			return nVeces; // return no fuciona no se porque
 		}	
+		
+		//////////////////////////////// probar si la palabra es palidromo(si la palabra puedes leerla desde las dos lados) como oro
+		
+
+		
+		public static boolean esPalindromo (String palabra)
+		{
+			boolean resulta=false;
+			int leng=palabra.length();
+			int con=0;
+			int con2=leng-1;
+			char inicio=0;
+			char fin=0;
+			
+			do{
+				 inicio=palabra.charAt(con);
+				 fin=palabra.charAt(con2);
+				con++;
+				con2--;
+			}while(fin==inicio && con<leng);
+
+			if(con==leng)
+			{
+				resulta=true;
+			}
+			 
+	      if(resulta==false)
+	    	{System.out.println("la palabra no es palindromo");}
+	       else
+	        {System.out.println("la palabra es palindromo");}
+		
+		return resulta;
+	
+		
+		}
+
 		
 }
 	

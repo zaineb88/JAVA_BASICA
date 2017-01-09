@@ -20,6 +20,10 @@ public class Cadina {
 			 System.out.println("Palabra  "+i+ "es "+ argumentos[i]);
 		 }
 		 
+		
+		 
 	}
+	
+	
 
 }
