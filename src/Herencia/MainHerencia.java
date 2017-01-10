@@ -17,7 +17,7 @@ public class MainHerencia {
 		alumno2.mostrarPersona();
 		alumno2.setNota(4);
 		
-		Croqueta croqueta=new Croqueta();
+	
 		
 		
 		System.out.println("hashCode: "+ alumno.hashCode());

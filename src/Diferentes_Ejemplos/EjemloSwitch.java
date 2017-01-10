@@ -5,7 +5,7 @@ public class EjemloSwitch {
 	public static void main(String[] args) {
 		
 		
-	
+		imprimeNotaAlfabitica(5);
 		// TODO Auto-generated method stub
 		
 	}

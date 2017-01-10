@@ -38,7 +38,7 @@ public class Funciones {
 
 	////////////// buscar persona
 
-	public static int buscar(String persona) { // va a volver su posision porque voy a utilisarlo en el metodo de borra
+	public static int buscar(String persona) { // va a volver su posision porque voy a utilisarlo en el metodo de borrar
 
 		 
 		Persona persona_aux = null;
@@ -58,7 +58,7 @@ public class Funciones {
 		array_persona[3] = persona4;
 		array_persona[4] = persona5;
 		
-        int pos=10;// le he dado el valor 10 porque tiene que ser un valor mayor de  5 (NUM PERSONAS)
+        int pos=-1; // le he dado el valor -1 porque tiene que ser <0 para que no pase error con la primer array de pos 0 en el metodo de borrar
 		int con = 0;
 		int hay=0;
 		
@@ -85,6 +85,16 @@ public class Funciones {
 		return pos;
 
 	}
+	
+	////////////////////////////////// buscar por posision
+	
+	public Persona obtenerPersona(int pos)
+	{
+		Persona persona_pos=null;
+		Persona array_persona[] = null;
+		persona_pos=array_persona[pos];
+		return persona_pos;
+	}
 
 	///////////////// insertar persona
 
@@ -103,6 +113,10 @@ public class Funciones {
 		System.out.println("Su edad= " + edad);
 
 	}
+	
+	
+	
+	
 
 	
 	////////////////// borrar persona
@@ -128,7 +142,7 @@ public class Funciones {
 		
 
 		int pos= buscar(persona);
-		if(pos!=10){ 
+		if(pos>=0){ 
 		for(int i=pos;i<NUM_PERSONAS-1;i++)
 			{
 			array_persona[i]=array_persona[i+1];
