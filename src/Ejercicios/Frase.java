@@ -3,27 +3,34 @@ package Ejercicios;
 public class Frase {
 
 	public static void main(String[] args) {
-	
-		frase("hola me llamo zaineb");
 
+		String frase2 = fraseJunta("hola me llamo zaineb");
+		System.out.println(frase2);
+
+		
 	}
-	
-	public static String frase(String frase)
-	{
-		String fraseSalida=null;
-		int leng=frase.length();
 
-		for(int i=0;i<leng;i++)
-		{
-			if(frase.charAt(i)!=' ')
-			{
-				System.out.print(frase.charAt(i));	
-				fraseSalida=fraseSalida+frase.charAt(i); 
-			}
-
-		}
 	
-		return fraseSalida; // no funciona (pregunta sobre esto)
+	
+	public static String fraseJunta(String frase) {
+		String fraseSalida = "";
+		int leng = frase.length();
+
+		fraseSalida= frase.replace(" ", ""); //  replacar lo que esta en 2 lado en la primer lado
+		
+		///////////// con otra manera
+		
+//		for (int i = 0; i < leng; i++) {
+//			if (frase.charAt(i) != ' ') {
+//
+//				fraseSalida = fraseSalida + frase.charAt(i);
+//			}
+//
+//		}
+
+		return fraseSalida;
 	}
 
 }
+
+

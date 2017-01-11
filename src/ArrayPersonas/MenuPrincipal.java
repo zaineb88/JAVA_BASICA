@@ -59,6 +59,7 @@ public class MenuPrincipal {
 			System.out.println("SALIR");
 			// metodo de salir
 			System.exit(0);
+			
 		default:
 			System.out.println("Losiento ha elegido número incorrect");
 
