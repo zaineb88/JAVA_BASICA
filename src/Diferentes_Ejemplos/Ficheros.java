@@ -1,6 +1,7 @@
 package Diferentes_Ejemplos;
 
 import java.io.File;
+import java.util.Scanner;
 
 public class Ficheros {
 
@@ -40,7 +41,60 @@ public class Ficheros {
 			System.out.println("El fichero no existe");
 
 		}
-
+		
+	
+	//////////////////// llamada de los metodos
+		
+		System.out.println("llama del metodo");
+	
+     //listaDirectorio("fichero");
+	
+	 boolean res=createNewFile();
+	
+	if(res)
+	{
+		System.out.println("el fichero ha creado");
+	}
+	
+	
+	
+	}
+	
+	
+	/////////////////////////////listar directorio y lo que esta entre los directorios de cada directio
+	
+	public static void listaDirectorio(String nombre)
+	{
+		File directorio=new File(nombre);
+		String[] lista_ficheros=null;
+		System.out.println(directorio.getName());
+		
+		if(directorio.isDirectory())
+		{
+			lista_ficheros=directorio.list();
+			for(int i=0;i<lista_ficheros.length;i++)
+			{
+				listaDirectorio(nombre+"\\"+lista_ficheros[i]);
+			}
+		}
+		
 	}
 
+	///////////////////////////// crear un fichero con nombre pedido desde el usario
+	
+	public static boolean createNewFile()
+	{
+		boolean res=true;
+		
+		String nombreFichero=null;
+		Scanner sc=null;
+		sc=new Scanner(System.in);
+		nombreFichero=sc.nextLine();
+		
+		 File file=new File("C:\\Users\\Administrador\\nombreFichero");
+		 createNewFile();
+		return res;
+	}
+	
+	
 }
