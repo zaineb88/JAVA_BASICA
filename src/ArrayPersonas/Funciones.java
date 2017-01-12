@@ -281,19 +281,23 @@ public class Funciones {
 		///////////// ordenar 
 		
 		for (int i = 0; i < NUM_PERSONAS; i++) {
-			
-			
-			if(array_persona[i].getEdad()>array_persona[i+1].getEdad())
+			for(int j=0;j<NUM_PERSONAS-i-1;j++)
 			{
-				persona_aux=array_persona[i+1];
+			
+			if(array_persona[j].getEdad()>array_persona[j+1].getEdad())
+			{
+				persona_aux=array_persona[j+1];
 				
-				array_persona[i+1]=array_persona[i];
+				array_persona[j+1]=array_persona[j];
 				
-				array_persona[i+1]=persona_aux;
-				
+				array_persona[j+1]=persona_aux;
+
+
 			}
 
 			}
+		
+		}
 		
 		////////// mostrar
 		
@@ -306,7 +310,6 @@ public class Funciones {
 			System.out.println("Su edad= " + edad_aux);
 		}
          
-			
 		
 	}
 	

@@ -23,12 +23,17 @@ public class Ficheros {
 		if (file2.exists()) {
 			System.out.println("El fichero existe");
 
-			// listar los que hay en el carpeta
+			// listar los que hay en la carpeta
 			
 			String[] lista = null;
 			lista = file2.list();
-			for (int i = 0; i < lista.length; i++) {
+			
+			for (int i = 0; i < lista.length; i++)
+			{        
+				if(    (lista[i].contains("a")) || (lista[i].contains("A"))) // listar solo los reposetorios que llevan en su nombre la letra a
+				{
 				System.out.println(lista[i]);
+				}
 			}
 
 		} else {
