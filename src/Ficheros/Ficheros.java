@@ -1,6 +1,9 @@
-package Diferentes_Ejemplos;
+package Ficheros;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Ficheros {
@@ -49,14 +52,19 @@ public class Ficheros {
 	
      //listaDirectorio("fichero");
 	
-	 boolean res=createNewFile();
+//	 boolean res=crearFichero();
+//	
+//	if(res)
+//	{
+//		System.out.println("el fichero ha creado");
+//	}
 	
-	if(res)
-	{
-		System.out.println("el fichero ha creado");
-	}
-	
-	
+	 boolean res2=borraFichero();
+		
+		if(res2)
+		{
+			System.out.println("el fichero ha creado");
+		}
 	
 	}
 	
@@ -80,21 +88,63 @@ public class Ficheros {
 		
 	}
 
-	///////////////////////////// crear un fichero con nombre pedido desde el usario
+	///////////////////////////// crear un fichero con nombre pedido desde el usuario
 	
-	public static boolean createNewFile()
+	public static boolean crearFichero()
 	{
-		boolean res=true;
+		boolean res=false;
+		
+		//////////////// pedir nombre desde el usario 
 		
 		String nombreFichero=null;
 		Scanner sc=null;
 		sc=new Scanner(System.in);
+		System.out.println("Elige un nombre del fichero");
 		nombreFichero=sc.nextLine();
 		
-		 File file=new File("C:\\Users\\Administrador\\nombreFichero");
-		 createNewFile();
+		/////////////////////// crear fichero    // utilisamos el metodo file.createNewFile();
+		
+		File file=new File("C:\\Users\\Administrador\\"+nombreFichero);
+		
+		try {
+			  // A partir del objeto File creamos el fichero físicamente
+			  if (file.createNewFile())
+			    System.out.println("El fichero se ha creado correctamente");
+			  else
+			    System.out.println("No ha podido ser creado el fichero");
+			} catch (IOException ioe) {
+			  ioe.printStackTrace();
+			}
+	
 		return res;
 	}
 	
 	
+	////////////////////////////////////////// crear un metodo para borrar un fichero  // utilisamos el metodo file.delete();
+	
+	public static boolean borraFichero()
+	{
+		boolean res=false;
+		String nombreFichero=null;
+		Scanner sc=null;
+		sc=new Scanner(System.in);
+		
+		System.out.println("Elige un nombre del fichero que quieres borrar");
+		nombreFichero=sc.nextLine();
+		
+		File file=new File("C:\\Users\\Administrador\\"+nombreFichero);
+		if (file.delete()) 
+			   System.out.println("El fichero ha sido borrado satisfactoriamente");
+			else
+			   System.out.println("El fichero no puede ser borrado");
+		
+		
+		
+		return res;
+	}
+	
+
+	
+	
+//fin de la clase
 }
