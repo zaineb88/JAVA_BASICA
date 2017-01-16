@@ -1,4 +1,4 @@
-package Diferentes_Ejemplos;
+package Ejercicios;
 
 public class Codificar {
 	
