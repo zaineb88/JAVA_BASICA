@@ -1,6 +1,6 @@
 package Ejercicios;
 
-public class Frase {
+public class FraseJunta {
 
 	public static void main(String[] args) {
 
