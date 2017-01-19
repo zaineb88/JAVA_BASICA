@@ -67,23 +67,42 @@ public class MenuCuenta {
 
 		String user = "";
 		String pass = "";
+		
 		boolean res = false;
+		
 		BufferedReader br = new BufferedReader(new FileReader(new File("USERS")));
 		BufferedReader br2 = new BufferedReader(new FileReader(new File("PASSWORDS")));
 		user = br.readLine();
 		pass = br2.readLine();
-
-		if (login1.equals(user) && pw1.equals(pass)) {
+		int i=0;
+		  
+       while(i<2 && (!login1.equals(user) || !pw1.equals(pass))){
+		if (login1.equals(user) && pw1.equals(pass))
+		{
 			res = true;
 			System.out.println("BIENVENIDO");
-		} else {
-			System.out.println("Ha introducido un eroor ");
-		}
+	     	} else {
+			System.out.println("Ha introducido un error intentalo de nuevo");
+			login1=  NombreAcceder(); 
+			pw1=contraseniaAcceder();
 
+			i++;
+		}   
+       }
+       
+       if((!login1.equals(user) || !pw1.equals(pass)))
+       {System.out.println("Losiento has terminado sus intentos");}
+       else
+       {System.out.println("BIENVENIDO");}
+       
+      
+     //  System.exit();
+	   
 		return res;
 	}
 
 	////////////////////////////////////////////// METODOS DE ESCRIBIR Y LEER DE A FICHERO
+	
 	
 	public static boolean escribirEnFichero(String login) {
 		boolean res = true;
@@ -162,7 +181,7 @@ public class MenuCuenta {
 		return res;
 	}
 
-	/////////////////////////////////////////////////////// FUNCIONES 
+	/////////////////////////////////////////////////////// FUNCIONES
 
 	public static String NombreRegistrar() {
 		String nombre = null;
