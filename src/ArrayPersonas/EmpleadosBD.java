@@ -30,14 +30,21 @@ public class EmpleadosBD {
 
 		
 		rset = stmt.executeQuery("SELECT e.EMPLOYEE_ID, e.FIRST_NAME,e.SALARY,e.DEPARTMENT_ID,d.DEPARTMENT_NAME FROM EMPLOYEES e, DEPARTMENTS d where e.DEPARTMENT_ID = d.DEPARTMENT_ID ORDER BY e.SALARY DESC");
+	
+		    int id = 0;
+			String nombre = null;  
+			int salario = 0;
+			int dpto = 0;
+			String dptoName = null;
+		
 		while (rset.next()) 
 			
 		{  
-		 				int id = rset.getInt("EMPLOYEE_ID");
-		 				String nombre = rset.getString("FIRST_NAME");  
-		 				int salario = rset.getInt("SALARY");
-		 				int dpto = rset.getInt("DEPARTMENT_ID");
-		 				String dptoName = rset.getString("DEPARTMENT_NAME");
+		 				 id = rset.getInt("EMPLOYEE_ID");
+		 				 nombre = rset.getString("FIRST_NAME");  
+		 				 salario = rset.getInt("SALARY");
+		 				 dpto = rset.getInt("DEPARTMENT_ID");
+		 				 dptoName = rset.getString("DEPARTMENT_NAME");
 		 			
 		 				empleado = new Empleado(id,nombre,salario,dpto,dptoName);
 		 				lista_empleados.add(empleado);
