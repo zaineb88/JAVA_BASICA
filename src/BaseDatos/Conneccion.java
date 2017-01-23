@@ -42,7 +42,7 @@ public class Conneccion {
 	     
 	     
 	     
-	/*     
+	     
 		try {   // try catch es obligatorio es check exception
 			// registro el driver, en realidad, hago que se ejecuten unas pocas líneas de la clase OracleDriver
 			
@@ -91,7 +91,7 @@ public class Conneccion {
 			}
 
 		}
-*/
+
 	}
 
 }
