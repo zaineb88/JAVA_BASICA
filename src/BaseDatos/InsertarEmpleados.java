@@ -8,8 +8,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 public class InsertarEmpleados {
-	
-	// ME SALE UN ERROR (Error: No se pudo encontrar o cargar las principales clases BaseDatos.InsertarEmpleados)
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
 		
@@ -30,13 +28,19 @@ public class InsertarEmpleados {
 				
              	conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "HR", "password"); 
 				stmt = conn.createStatement();
-				rset = stmt.executeUpdate("insert into EMPLOYEES values(108,'jilali','kjdj@hotmail.com','12/11/2010','AD_VP') ");
-			/*
-				  int id = 0;
+				rset = stmt.executeUpdate("insert into EMPLOYEES(EMPLOYEE_ID,LAST_NAME,EMAIL,HIRE_DATE,DEPARTMENT_ID,JOB_ID) values (108,'jilali','kjdj@hotmail.com','12/11/2010','AD_VP')");
+				
+			        int id = 0;
 					String nombre = null;  
 					String email = null;
 					String hireDate=null;
 					String jobId=null;
+					
+				empleado = new EmpleadoEj(id,nombre,email,hireDate,jobId);
+ 				lista_empleados.add(empleado);
+				
+				/*
+			
 				
 				while (rset.next()) 
 					
