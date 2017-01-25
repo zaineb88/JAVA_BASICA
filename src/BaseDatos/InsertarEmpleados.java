@@ -10,7 +10,8 @@ import java.util.ArrayList;
 public class InsertarEmpleados {
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
-		
+		 
+	                                           	// NO FUNCIONA 
 		
 		Connection conn = null;
 		int rset = 0;
@@ -28,7 +29,7 @@ public class InsertarEmpleados {
 				
              	conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "HR", "password"); 
 				stmt = conn.createStatement();
-				rset = stmt.executeUpdate("insert into EMPLOYEES(EMPLOYEE_ID,LAST_NAME,EMAIL,HIRE_DATE,DEPARTMENT_ID,JOB_ID) values (108,'jilali','kjdj@hotmail.com','12/11/2010','AD_VP')");
+				rset = stmt.executeUpdate("insert into EMPLOYEES(EMPLOYEE_ID,LAST_NAME,EMAIL,HIRE_DATE,DEPARTMENT_ID,JOB_ID) values ('108','jilali','kjdj@hotmail.com','12/11/2010','AD_VP')");
 				
 			        int id = 0;
 					String nombre = null;  
