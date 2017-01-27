@@ -43,7 +43,7 @@ public class ActualizaSalary2 {
               conn.commit();
 			
 			 savepoint= conn.setSavepoint(); // segnifica que el rollback empieza despues
-			rset3 = stmt.executeQuery(" SELECT SALARY FROM  EMPLOYEES  where DEPARTMENT_ID IN ( SELECT DEPARTMENT_ID FROM DEPARTMENTS WHERE DEPARTMENT_NAME='Administration')");
+			rset3 = stmt.executeQuery(" SELECT SALARY FROM   EMPLOYEES  where DEPARTMENT_ID IN ( SELECT DEPARTMENT_ID FROM DEPARTMENTS WHERE DEPARTMENT_NAME='Administration')");
 		
 			
 		while (rset3.next()) 
