@@ -2,10 +2,8 @@ package Patron;
 
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.util.Properties;
 
 public class Idiomas {
@@ -28,9 +26,9 @@ public class Idiomas {
 
 		        String start=fichero_propiedaes.getProperty("start");
 			    System.out.println(start); 
-		        String end=fichero_propiedaes.getProperty("end");
+		        String end=fichero_propiedaes.getProperty("body");
 			    System.out.println(end);
-			    String body=fichero_propiedaes.getProperty("body");
+			    String body=fichero_propiedaes.getProperty("end");
 			    System.out.println(body);
 			    fr.close();
 
@@ -46,9 +44,9 @@ public class Idiomas {
 				    
 			        String start=fichero_propiedaes.getProperty("start");
 				    System.out.println(start);
-				    String end=fichero_propiedaes.getProperty("end");
+				    String end=fichero_propiedaes.getProperty("body");
 				    System.out.println(end);
-				    String body=fichero_propiedaes.getProperty("body");
+				    String body=fichero_propiedaes.getProperty("end");
 				     System.out.println(body);
 				     fr.close();
 				     
@@ -62,9 +60,9 @@ public class Idiomas {
 					    
 				        String start=fichero_propiedaes.getProperty("start");
 					    System.out.println(start);
-					    String end=fichero_propiedaes.getProperty("end");
+					    String end=fichero_propiedaes.getProperty("body");
 					    System.out.println(end);
-					    String body=fichero_propiedaes.getProperty("body");
+					    String body=fichero_propiedaes.getProperty("end");
 					    System.out.println(body);
 					    fr.close();
 				   }
@@ -81,7 +79,7 @@ public class Idiomas {
 			
 			String nombreCuento = fichero_propiedaes.getProperty("outfile");
 			
-			BufferedWriter bw = new	BufferedWriter(new FileWriter(new File(nombreCuento)));
+			BufferedWriter bw = new	BufferedWriter(new FileWriter(new File(nombreCuento))); // (new FileWriter(new File(nombreCuento))) c rear un fichero donde puedo escribir el contenido
 			String linea = null;
 			
 			
