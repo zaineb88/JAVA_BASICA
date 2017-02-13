@@ -1,11 +1,10 @@
 package Diferentes_Ejemplos;
 
-import javax.swing.plaf.synth.SynthSeparatorUI;
 
 public class VarArgsMain {
 	
 	
-	private int regTelfs (String ... telefonos)
+	private int regTelfs (String ... telefonos) // metodo que revuelva el numero del contenido de array
 	{
 		System.out.println("Contenido ");
 		for (String cad : telefonos)
