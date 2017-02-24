@@ -18,11 +18,6 @@
          <anyo>2005</anyo>  
          <editorial>Ediciones SM</editorial>  
       </libro>  
- <libro isbn="978-84-8346-808-1">  
-         <titulo>Next</titulo>  
-         <autor>Michael Crichton</autor>  
-         <anyo>2008</anyo>  
-         <editorial>DeBolsillo</editorial>  
-      </libro>  
+
     
 </libros> 
