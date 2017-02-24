@@ -39,7 +39,7 @@ public class MainLibro {
 
 		int nlibros=0;
 	nlibros=ParserLibroXML.getNLibros2();
-      //	nlibros=ParserLibroXML.mapa_libros.size();
+     
 		return nlibros;
 	}
 	
