@@ -38,7 +38,7 @@ public class MainLibro {
 	{
 
 		int nlibros=0;
-	nlibros=ParserLibroXML.getNLibros2();
+	    nlibros=ParserLibroXML.getNLibros2();
      
 		return nlibros;
 	}
